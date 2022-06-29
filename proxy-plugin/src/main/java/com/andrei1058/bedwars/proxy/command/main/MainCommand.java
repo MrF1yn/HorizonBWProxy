@@ -23,7 +23,7 @@ public class MainCommand extends ParentCommand {
         super(name);
         instance = this;
         setAliases(Arrays.asList("bedwars"));
-        addSubCommand(new SelectorCMD("gui", ""));
+        addSubCommand(new SelectorCMD("gui", "bw.mapselector"));
         addSubCommand(new LangCMD("lang", ""));
         addSubCommand(new LangCMD("language", ""));
         addSubCommand(new JoinCMD("join", ""));
@@ -35,10 +35,6 @@ public class MainCommand extends ParentCommand {
     public void sendDefaultMessage(CommandSender s) {
         if (s instanceof ConsoleCommandSender) return;
         Player p = (Player) s;
-
-        s.sendMessage(" ");
-        s.sendMessage("§8§l|-" + " §6" + BedWarsProxy.getPlugin().getDescription().getName() + " v" + BedWarsProxy.getPlugin().getDescription().getVersion() + " §7- §cCommands");
-        s.sendMessage(" ");
         if (hasSubCommand("gui")) {
             p.spigot().sendMessage(BedWarsProxy.createTC(Language.getMsg(p, Messages.COMMAND_GUI_DISPLAY), "/bw gui", Language.getMsg(p, Messages.COMMAND_GUI_HOVER)));
         }

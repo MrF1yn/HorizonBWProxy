@@ -12,6 +12,7 @@ public class Messages {
     public static String ARENA_GUI_INV_NAME = "arena-selector-gui-name";
     public static String ARENA_GUI_ARENA_CONTENT_NAME = "arena-selector-content-name";
     public static String ARENA_GUI_ARENA_CONTENT_LORE = "arena-selector-content-lore";
+    public static String MAP_SELECTOR_NO_PERM = "mapselector-denied";
 
     // Arena status/ status change related
     public static String ARENA_STATUS_WAITING_NAME = "arena-status-waiting";
