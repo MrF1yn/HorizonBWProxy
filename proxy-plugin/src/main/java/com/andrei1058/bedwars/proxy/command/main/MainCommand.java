@@ -23,7 +23,7 @@ public class MainCommand extends ParentCommand {
         super(name);
         instance = this;
         setAliases(Arrays.asList("bedwars"));
-        addSubCommand(new SelectorCMD("gui", "bedwars.mapselector"));
+        addSubCommand(new SelectorCMD("gui", ""));
         addSubCommand(new LangCMD("lang", ""));
         addSubCommand(new LangCMD("language", ""));
         addSubCommand(new JoinCMD("join", ""));
